@@ -63,6 +63,7 @@ else
     fprintf(fid, "\\def\\myCone{%f}\n", c1);
     fprintf(fid, "\\def\\myCtwo{%f}\n", c2);
     fprintf(fid, "\\def\\myReynoldsnumeberperunitoflenght{%f}\n", reynoldsnumeberperunitoflenght);
+    fprintf(fid, "\\def\\myDynamicviscosity{%f}\n", dynamicviscosity);
 
 
 
