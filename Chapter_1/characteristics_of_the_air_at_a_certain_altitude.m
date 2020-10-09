@@ -60,8 +60,8 @@ else
     fprintf(fid, "\\def\\myDynamicpressureNm{%f}\n", dynamicpressure);
     fprintf(fid, "\\def\\myDynamicpressureBar{%f}\n", dynamicpressure/u.bar);
     fprintf(fid, "\\def\\myDensity{%f}\n", density);
-    fprintf(fid, "\\def\\myC1{%f}\n", c1);
-    fprintf(fid, "\\def\\myC2{%f}\n", c2);
+    fprintf(fid, "\\def\\myCone{%f}\n", c1);
+    fprintf(fid, "\\def\\myCtwo{%f}\n", c2);
     fprintf(fid, "\\def\\myReynoldsnumeberperunitoflenght{%f}\n", reynoldsnumeberperunitoflenght);
 
 
