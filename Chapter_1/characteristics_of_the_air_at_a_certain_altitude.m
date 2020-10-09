@@ -19,7 +19,7 @@ relativedensity= density/densitysealevel;
 dynamicpressure=0.5*density*(speed^2);
 c1=1.458*u.kg / (u.meterPerSecond* (u.K)^(1/2)); %coeff legge di sutherland
 c2=110.4*u.K;
-dynamicviscosity=c1*temperature^(3/2)/(temperature+c2);  
+dynamicviscosity=c1*10^(-6)*temperature^(3/2)/(temperature+c2);  
 reynoldsnumeberperunitoflenght=density*speed/dynamicviscosity;
 
 fprintf("Temperature at 8000m in kelvin : %f\n", temperature )
