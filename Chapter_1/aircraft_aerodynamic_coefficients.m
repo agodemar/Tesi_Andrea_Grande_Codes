@@ -47,6 +47,7 @@ else
     fprintf(fid, "\\def\\myOswaldFactor{%f}\n", oswald_factor);
     fprintf(fid, "\\def\\myKpolar{%f}\n", k_polar);
     fprintf(fid, "\\def\\myDragCoefficientZero{%f}\n", drag_coefficient_zero);
+    fprintf(fid, "\\def\\myDragCoefficient{%f}\n", drag_coefficient);
     fprintf(fid, "\\def\\myDragN{%f}\n", drag_N);
     fprintf(fid, "\\def\\myDragKgf{%f}\n", drag_kgf);
     fprintf(fid, "\\def\\myDragLbf{%f}\n", drag_lbf);
