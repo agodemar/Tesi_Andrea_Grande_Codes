@@ -35,7 +35,6 @@ else
     fprintf(fid, "\\def\\myWingSurfaceMTSD{%f}\n", wing_surface_mt_squared);
     fprintf(fid, "\\def\\myWingSurfaceFTSD{%f}\n", wing_surface_ft_squared);
     fprintf(fid, "\\def\\myMach{%f}\n", mach_number);
-    fprintf(fid, "\\def\\mySoundspeed{%f}\n", soundSpeed);
     fprintf(fid, "\\def\\mySpeedKts{%f}\n", speed_kts);
     fprintf(fid, "\\def\\mySpeedMS{%f}\n", speed_ms);
     fprintf(fid, "\\def\\mySpeedKmH{%f}\n", speed_kmh);
