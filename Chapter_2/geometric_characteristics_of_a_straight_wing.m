@@ -27,6 +27,7 @@ else
     fprintf(fid, "\\def\\myLambdaCQuarter{%f}\n", lambda_C4);
     fprintf(fid, "\\def\\myLambdaLEDeg{%f}\n", lambda_LE);
     fprintf(fid, "\\def\\myLambdaLERad{%f}\n", lambda_LE/u.rad);
+    fprintf(fid, "\\def\\myAspectRatioWing{%f}\n", aspect_ratio);
 
     % ...
     fclose(fid);
