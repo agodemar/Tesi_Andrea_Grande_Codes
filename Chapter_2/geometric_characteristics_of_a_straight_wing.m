@@ -11,8 +11,8 @@ mean_chord=(2/3)*c*(1+taper_ratio+taper_ratio^2)/(1+taper_ratio);
 x_le_mean_chord= (b/6)*((1+2*taper_ratio)/(1+taper_ratio))*tan(lambda_LE);
 y_mean_chord=(b/6)*((1+2*taper_ratio)/(1+taper_ratio));
 %% Write data file
-[status, msg] = mkdir("./Geometric characteristics of a straight wing"); % create folder first
-fid = fopen('./Geometric characteristics of a straight wing/data.tex', 'w');
+[status, msg] = mkdir("./geometric_characteristics_of_a_straight_wing"); % create folder first
+fid = fopen('./geometric_characteristics_of_a_straight_wing/data.tex', 'w');
 if (fid == -1)
     fprintf("Cannot open file.")
 else

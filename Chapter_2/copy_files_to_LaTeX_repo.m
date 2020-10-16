@@ -15,3 +15,4 @@ for i=1:length(subdirs)
         strcat(latex_dir, subdirs(i), "data.tex") ...
     );
 end
+
