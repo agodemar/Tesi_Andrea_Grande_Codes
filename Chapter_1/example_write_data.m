@@ -1,3 +1,4 @@
+clear all; close all ;clc;
 x = linspace(0,2*pi,20);
 y = sin(x);
 
