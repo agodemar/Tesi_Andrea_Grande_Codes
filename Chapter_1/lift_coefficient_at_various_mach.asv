@@ -23,9 +23,6 @@ sound_speed_ms = a;
 
 v_speed = v_mach_number * sound_speed ;
 
-v_speed_ms = v_speed/u.meterPerSecond;
-v_speed_kmh = v_speed/u.kmh;
-
 density = rho * (u.kg/u.m3);
 density_kg_mt_cubed = rho;
 
@@ -37,7 +34,7 @@ v_dynamic_pressure_bar = v_dynamic_pressure./u.pascal;
 v_lift_coefficient = (gravitational_acceleration.*mass)./(v_dynamic_pressure.*wing_surface); 
 
 %writing data file for pgfplot
-data = [v_mach_number, v_lift_coefficient, v_speed_ms, v_speed_kmh, v_dynamic_pressure_bar];
+data = [v_mach_number, v_lift_coefficient];
 
 %% Write data file
 [status, msg] = mkdir("./lift_coefficient_at_various_mach"); % create folder first
