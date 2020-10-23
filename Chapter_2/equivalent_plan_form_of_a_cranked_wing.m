@@ -21,7 +21,7 @@ taper_ratio_eq = c_t/c_r_eq;
 lambda_LE_E = atan((5.89*u.m -X_P_1)/(b/2)); 
 lambda_LE_E_deg  = lambda_LE_E/u.rad;
 lambda_LE_E_rad =  lambda_LE_E/u.deg;
-
+taper_ratio = c_t/c_r_1;
 
   
 %% Write data file
@@ -53,7 +53,7 @@ else
     fprintf(fid, "\\def\\myXEquivalentChordTEToApexWingMT{%f}\n",X_P_2);
     
     fprintf(fid, "\\def\\myEquivalentTaperRatioWing{%f}\n", taper_ratio_eq);
-    
+    fprintf(fid, "\\def\\myTaperRatioWing{%f}\n", taper_ratio);
 
 
     % ...
