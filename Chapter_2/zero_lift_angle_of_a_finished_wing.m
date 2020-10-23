@@ -39,7 +39,7 @@ wing_surface_mt_squared = wing_surface/u.m2;
 fun=@(y) ((((coeff_a_0L*u.m)*y+coeff_b_0L)-(coeff_a_eps*u.m)*y).*((coeff_a_c)*y+coeff_b_c/u.m));
 alpha_0L =( 2/(wing_surface/u.m^2))* integral(fun,0,13.4);
 alpha_0L_rad = alpha_0L*u.rad;
-alpha_0L_deg = alpha_0L_rad/u.deg
+alpha_0L_deg = alpha_0L_rad/u.deg;
 
 
 %% Write data file
