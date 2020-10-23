@@ -63,9 +63,9 @@ else
     fprintf(fid, "\\def\\mySweepLEWingIRAD{%f}\n", lambda_LE_1_rad);
     fprintf(fid, "\\def\\mySweepLEWingIIRAD{%f}\n", lambda_LE_2_rad);
     
-    fprintf(fid, "\\def\\myCoeffAChordWingIMT{%f}\n", coeff_a_1);
+    fprintf(fid, "\\def\\myCoeffAChordWingI{%f}\n", coeff_a_1);
     fprintf(fid, "\\def\\myCoeffBChordWingIMT{%f}\n", coeff_b_1);
-    fprintf(fid, "\\def\\myCoeffAChordWingIIMT{%f}\n", coeff_a_2);
+    fprintf(fid, "\\def\\myCoeffAChordWingII{%f}\n", coeff_a_2);
     fprintf(fid, "\\def\\myCoeffBChordWingIIMT{%f}\n", coeff_b_2);
     
     fprintf(fid, "\\def\\myTaperRatioWingI{%f}\n", taper_ratio_1);
