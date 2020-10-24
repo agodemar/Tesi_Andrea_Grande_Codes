@@ -47,12 +47,13 @@ tc_med =( 2/(wing_surface/u.m^2))* integral(fun,0,13.4);
 
 k_alpha_1 = -0.381;
 k_alpha_2 = 0.85;
-alpha_0L = (alpha_0L_med_rad+k_alpha_1*epsilon_G_0L_t_rad)*k_alpha_2;
-alpha_0L_rad = alpha_0L/u.rad;
-alpha_0L_deg = alpha_0L/u.deg;
-
-
-  
+alpha_0L_dat = (alpha_0L_med_rad+k_alpha_1*epsilon_G_0L_t_rad)*k_alpha_2;
+alpha_0L_dat_rad = alpha_0L_dat/u.rad;
+alpha_0L_dat_deg = alpha_0L_dat/u.deg;
+fun=@(y) ((((coeff_a_0L*u.m)*y+coeff_b_0L)-(coeff_a_eps*u.m)*y).*((coeff_a_c)*y+coeff_b_c/u.m));
+alpha_0L =( 2/(wing_surface/u.m^2))* integral(fun,0,13.4);
+alpha_0L_rad = alpha_0L*u.rad;
+alpha_0L_deg = alpha_0L_rad/u.deg;
  
    
  
@@ -94,8 +95,10 @@ else
     fprintf(fid, "\\def\\myCoeffBPercThicknessWing{%f}\n", coeff_b_tc);
     fprintf(fid, "\\def\\myAlphaZeroLiftMeanWingRAD{%f}\n", alpha_0L_med_rad );
     fprintf(fid, "\\def\\myAlphaZeroLiftMeanWingDEG{%f}\n", alpha_0L_med_rad);    
-    fprintf(fid, "\\def\\myAlphaZeroLiftDatcomWingRAD{%f}\n",alpha_0L_rad );
-    fprintf(fid, "\\def\\myAlphaZeroLiftDatcomWingDEG{%f}\n", alpha_0L_deg);
+    fprintf(fid, "\\def\\myAlphaZeroLiftDatcomWingRAD{%f}\n",alpha_0L_dat_rad );
+    fprintf(fid, "\\def\\myAlphaZeroLiftDatcomWingDEG{%f}\n", alpha_0L_dat_deg);
+    fprintf(fid, "\\def\\myAlphaZeroLiftWingRAD{%f}\n",alpha_0L_rad );
+    fprintf(fid, "\\def\\myAlphaZeroLiftWingDEG{%f}\n", alpha_0L_deg);
     fprintf(fid, "\\def\\myDeltaAlphaZeroLiftOverTwistWing{%f}\n",k_alpha_1 );
     fprintf(fid, "\\def\\myPrandtlGlauertCorrectionAlphaZeroLiftWing{%f}\n", k_alpha_2);
     % ...
