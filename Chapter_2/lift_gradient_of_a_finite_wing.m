@@ -55,7 +55,8 @@ else
     fprintf(fid, "\\def\\myCoeffAClalphaWingRADMT{%f}\n", coeff_a_cl_radm);
     fprintf(fid, "\\def\\myCoeffAClalphaWingDEGMT{%f}\n", coeff_a_cl_degm);
      fprintf(fid, "\\def\\myCoeffBClalphaWingRAD{%f}\n", coeff_b_cl);
-     
+      fprintf(fid, "\\def\\mySweepQuarterChordWingDEG{%f}\n", lambda_C4_deg);
+    fprintf(fid, "\\def\\mySweepQuarterChordWingRAD{%f}\n", lambda_C4_rad);
     fprintf(fid, "\\def\\myCLAlphaMeanWingRAD{%f}\n", cl_alpha_med_rad);
     fprintf(fid, "\\def\\myCLAlphaMeanWingDEG{%f}\n", cl_alpha_med_deg);
     fprintf(fid, "\\def\\myInducedDragFactorWing{%f}\n", oswald_factor);
