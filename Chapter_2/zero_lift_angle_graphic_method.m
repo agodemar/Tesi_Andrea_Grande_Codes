@@ -38,12 +38,12 @@ lambda_C4_rad = lambda_C4/u.rad;
 lambda_C4_deg = lambda_C4/u.deg;
 
 fun=@(y) (((coeff_a_0L*u.m)*y+coeff_b_0L).*((coeff_a_c)*y+coeff_b_c/u.m));
-alpha_0L_med =( 2/(wing_surface/u.m^2))* integral(fun,0,13.4);
+alpha_0L_med =( 2/(wing_surface/u.m^2))* integral(fun,0,(b/2)/u.m);
 alpha_0L_med_rad = alpha_0L_med*u.rad;
 alpha_0L_med_deg = alpha_0L_med_rad/u.deg;
 
 fun=@(y) (((coeff_a_tc*u.m)*y+coeff_b_tc).*((coeff_a_c)*y+coeff_b_c/u.m));
-tc_med =( 2/(wing_surface/u.m^2))* integral(fun,0,13.4);
+tc_med =( 2/(wing_surface/u.m^2))* integral(fun,0,(b/2)/u.m);
 
 k_alpha_1 = -0.381;
 k_alpha_2 = 0.85;
@@ -51,7 +51,7 @@ alpha_0L_dat = (alpha_0L_med_rad+k_alpha_1*epsilon_G_0L_t_rad)*k_alpha_2;
 alpha_0L_dat_rad = alpha_0L_dat/u.rad;
 alpha_0L_dat_deg = alpha_0L_dat/u.deg;
 fun=@(y) ((((coeff_a_0L*u.m)*y+coeff_b_0L)-(coeff_a_eps*u.m)*y).*((coeff_a_c)*y+coeff_b_c/u.m));
-alpha_0L =( 2/(wing_surface/u.m^2))* integral(fun,0,13.4);
+alpha_0L =( 2/(wing_surface/u.m^2))* integral(fun,0,(b/2)/u.m);
 alpha_0L_rad = alpha_0L*u.rad;
 alpha_0L_deg = alpha_0L_rad/u.deg;
  
