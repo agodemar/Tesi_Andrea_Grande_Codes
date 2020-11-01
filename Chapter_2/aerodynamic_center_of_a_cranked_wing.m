@@ -205,8 +205,9 @@ else
   fprintf(fid, "\\def\\myKTwoACDatcomWingI{%f}\n",k2_1 ); 
   fprintf(fid, "\\def\\myXACOverChordRootDatcomWingI{%f}\n",x_ac_cr_1 ); 
   fprintf(fid, "\\def\\myXACOverChordRootDatcomWingII{%f}\n",x_ac_cr_2_datcom );
-  
-  
+   
+    fprintf(fid, "\\def\\myXACOverChordRootDatcomWing{%f}\n",X_ac_cr );
+
    fprintf(fid, "\\def\\myChordRootWingIIPrimeMT{%f}\n",c_r_2_datcom ); 
    fprintf(fid, "\\def\\myTaperRatioWingIIPrime{%f}\n",taper_ratio_2_datcom );
   fprintf(fid, "\\def\\mySpanWingIIPrimeMT{%f}\n", b_2_datcom); 
@@ -219,6 +220,10 @@ else
   fprintf(fid, "\\def\\myCLAlphaPolhamusWingIIDEG{%f}\n",cl_alpha_2_datcom_deg );
   fprintf(fid, "\\def\\myXsiACWing{%f}\n",x_ac_c );
   fprintf(fid, "\\def\\myACWingToApexWingMT{%f}\n",X_ac );
+  fprintf(fid, "\\def\\myXsiACWingI{%f}\n",x_ac_c_1);
+ 
+  fprintf(fid, "\\def\\myKOneACDatcomWingII{%f}\n",k1_2_datcom);
+  fprintf(fid, "\\def\\myKTwoACDatcomWingII{%f}\n",k2_2_datcom);
  
     % ...
     fclose(fid);
