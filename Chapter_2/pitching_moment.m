@@ -145,7 +145,8 @@ else
     fprintf(fid, "\\def\\myCoeffCWing{%f}\n", coeff_c);
     fprintf(fid, "\\def\\myCoeffDWing{%f}\n", coeff_d);     
     fprintf(fid, "\\def\\myCoeffEWing{%f}\n", coeff_e);     
-    fprintf(fid, "\\def\\myCoeffFWing{%f}\n", coeff_f);     
+    fprintf(fid, "\\def\\myCoeffFWing{%f}\n", coeff_f); 
+    fprintf(fid, "\\def\\myCoeffGWing{%f}\n", coeff_g);     
     fprintf(fid, "\\def\\myCoeffHWing{%f}\n", coeff_h);
     fprintf(fid, "\\def\\myCoeffIWing{%f}\n", coeff_i);
     fprintf(fid, "\\def\\myCoeffJWing{%f}\n", coeff_j);
