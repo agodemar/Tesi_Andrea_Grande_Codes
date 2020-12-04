@@ -20,8 +20,8 @@ lambda_C2_rad = lambda_C2/u.rad;
 lambda_C2_deg = lambda_C2/u.deg;
 kp = 1+((8.2-2.3*lambda_LE_rad)-aspect_ratio*(0.22-0.153*lambda_LE_rad))/100;
 cl_alpha = 2*pi*aspect_ratio/(2+(4+(aspect_ratio*aspect_ratio*(1-Mach*Mach)/(kp*kp))*(1+(tan(lambda_C2_rad)*tan(lambda_C2_rad))/(1-Mach*Mach)))^(1/2)); 
-cl_alpha_rad = cl_alpha/u.rad;
-cl_alpha_deg = cl_alpha/u.deg;
+cl_alpha_rad = cl_alpha*u.rad
+cl_alpha_deg = cl_alpha*u.deg
 
    
   

@@ -74,8 +74,6 @@ alpha_0L_2_deg = alpha_0L_2_rad/u.deg;
 alpha_0L_rad = alpha_0L_1_rad+alpha_0L_2_rad;
 alpha_0L_deg = alpha_0L_1_deg+alpha_0L_2_deg;
 
-
-
 %% Write data file
 [status, msg] = mkdir("./zero_lift_angle_of_a_cranked_wing"); % create folder first
 fid = fopen('./zero_lift_angle_of_a_cranked_wing/data.tex', 'w');
@@ -104,7 +102,6 @@ else
     fprintf(fid, "\\def\\myAlphaZeroLiftTipWingIIDEG{%f}\n", alfa_0L_t_2_deg);
     fprintf(fid, "\\def\\myAlphaZeroLiftRootWingIIRAD{%f}\n", alpha_0L_r_2_rad);
     fprintf(fid, "\\def\\myAlphaZeroLiftTipWingIIRAD{%f}\n", alpha_0L_t_2_rad);
-    
     fprintf(fid, "\\def\\myTaperRatioWingI{%f}\n", taper_ratio_1);
     fprintf(fid, "\\def\\myTaperRatioWingII{%f}\n", taper_ratio_2);
     fprintf(fid, "\\def\\myTwistWingIDEG{%f}\n", epsilon_G_0L_t_1_deg);
@@ -122,8 +119,6 @@ else
     fprintf(fid, "\\def\\myCoeffATwistWingIIRADMT{%f}\n", coeff_a_eps_2);
     fprintf(fid, "\\def\\myCoeffBTwistWingIRAD{%f}\n", coeff_b_eps_1);
     fprintf(fid, "\\def\\myCoeffBTwistWingIIRAD{%f}\n", coeff_b_eps_2);
-
-    
     fprintf(fid, "\\def\\myAlphaZeroLiftWingIRAD{%f}\n", alpha_0L_1_rad );
     fprintf(fid, "\\def\\myAlphaZeroLiftWingIDEG{%f}\n", alpha_0L_1_deg);
     fprintf(fid, "\\def\\myAlphaZeroLiftWingIIRAD{%f}\n", alpha_0L_2_rad );

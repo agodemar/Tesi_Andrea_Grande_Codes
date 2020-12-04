@@ -1,39 +1,26 @@
 clear all; close all; clc;
 
 altitude = 4000 * u.m;
-% conversions
 altitude_ft = altitude/u.ft;
 altitude_mt = altitude/u.m;
-
 mass = 79000 * u.kg;
-% conversions
 mass_kg = mass/u.kg;
 mass_lb = mass/u.lb;
-
 wing_surface = 124.6 * u.m^2;
 wing_surface_mt_squared = wing_surface/u.m^2;
 wing_surface_ft_squared = wing_surface/u.ft^3;
-
 v_mach_number = [0.3; 0.4; 0.5; 0.6; 0.7; 0.8];
-
 [T, a, P, rho] = atmosisa(altitude_mt);
-
 sound_speed = a * u.meterPerSecond;
 sound_speed_ms = a;
-
 v_speed = v_mach_number * sound_speed ;
-
 v_speed_ms = v_speed/u.meterPerSecond;
 v_speed_kmh = v_speed/u.kmh;
-
 density = rho * (u.kg/u.m3);
 density_kg_mt_cubed = rho;
-
 gravitational_acceleration = 9.81*(u.meterPerSecond/u.second);
-
 v_dynamic_pressure = 0.5.*density.*(v_speed).^2;
 v_dynamic_pressure_bar = v_dynamic_pressure./u.pascal;
-
 v_lift_coefficient = (gravitational_acceleration.*mass)./(v_dynamic_pressure.*wing_surface); 
 
 %writing data file for pgfplot
@@ -52,15 +39,9 @@ else
     fprintf(fid, "\\def\\myMassLb{%f}\n", mass_lb);
     fprintf(fid, "\\def\\myWingSurfaceMTSD{%f}\n", wing_surface_mt_squared);
     fprintf(fid, "\\def\\myWingSurfaceFTSD{%f}\n", wing_surface_ft_squared);
-    %fprintf(fid, "\\def\\myMach{%f}\n", mach_number);
     fprintf(fid, "\\def\\mySoundSpeed{%f}\n", sound_speed);
-    %fprintf(fid, "\\def\\mySpeedMS{%f}\n", speed_ms);
     fprintf(fid, "\\def\\myGravitationalAcceleration{%f}\n", gravitational_acceleration);
     fprintf(fid, "\\def\\myDensityKGMC{%f}\n", density_kg_mt_cubed);
-    %fprintf(fid, "\\def\\myDynamicPressurePa{%f}\n", dynamic_pressure_pa);
-    %fprintf(fid, "\\def\\myDynamicPressureBar{%f}\n", dynamic_pressure_bar);
-    %fprintf(fid, "\\def\\myLiftCoefficient{%f}\n", lift_coefficient);
-
     % ...
     fclose(fid);
 end

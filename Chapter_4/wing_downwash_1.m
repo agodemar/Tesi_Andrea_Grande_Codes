@@ -27,11 +27,8 @@ alpha_0L_t_ = -1.5*u.deg;
 alpha_0L_t_deg = alpha_0L_t_/u.deg;
 alpha_0L_t_rad = alpha_0L_t_/u.rad;
 mach = 0.40;
-
 coeff_a_c = (c_t-c_r)/(b/2);
 coeff_b_c = c_r;
-
-
 coeff_a_cl = (cl_alpha_t_rad-cl_alpha_r_rad)/(b/2);
 coeff_a_cl_radm = coeff_a_cl*u.rad;
 coeff_a_cl_degm = coeff_a_cl*u.deg;
@@ -50,7 +47,6 @@ lambda_t_max_rad = lambda_t_max/u.rad;
 d_espilon_zero = 2*cl_alpha_rad/(pi*aspect_ratio*oswald_factor);
 d_espilon = d_espilon_zero*(1-mach*mach)^(1/2);
 
-
 %% Write data file
 [status, msg] = mkdir("./wing_downwash_1"); % create folder first
 fid = fopen('./wing_downwash_1/data.tex', 'w');
@@ -64,12 +60,10 @@ else
     fprintf(fid, "\\def\\myChordTipWingMT{%f}\n", c_t);
     fprintf(fid, "\\def\\myTaperRatioWing{%f}\n", taper_ratio);
     fprintf(fid, "\\def\\myAreaWingMTsquared{%f}\n", wing_surface_mt_squared);
-
     fprintf(fid, "\\def\\myCoeffAChordWing{%f}\n", coeff_a_c);
     fprintf(fid, "\\def\\myCoeffBChordWingMT{%f}\n", coeff_b_c);
     fprintf(fid, "\\def\\myCLAlphaRootWingRAD{%f}\n", cl_alpha_r_rad);
     fprintf(fid, "\\def\\myCLAlphaTipWingRAD{%f}\n", cl_alpha_t_rad);
-    
     fprintf(fid, "\\def\\myCoeffAClalphaWingRADMT{%f}\n", coeff_a_cl_radm);
     fprintf(fid, "\\def\\myCoeffAClalphaWingDEGMT{%f}\n", coeff_a_cl_degm);
     fprintf(fid, "\\def\\myCoeffBClalphaWingRAD{%f}\n", coeff_b_cl);
@@ -78,13 +72,10 @@ else
     fprintf(fid, "\\def\\myInducedDragFactorWing{%f}\n", oswald_factor);
     fprintf(fid, "\\def\\myCLAlphaWingRAD{%f}\n", cl_alpha_rad);
     fprintf(fid, "\\def\\myCLAlphaWingDEG{%f}\n", cl_alpha_deg);
-    
     fprintf(fid, "\\def\\mySweepTmaxWingDEG{%f}\n", lambda_t_max_deg);
     fprintf(fid, "\\def\\mySweepTmaxWingRAD{%f}\n", lambda_t_max_rad);
     fprintf(fid, "\\def\\myDownwashGradientLLTAtMachZeroWing{%f}\n", d_espilon_zero);
     fprintf(fid, "\\def\\myDownwashGradientLLTWing{%f}\n", d_espilon);
-    
-    
     % ...
     fclose(fid);
 end
